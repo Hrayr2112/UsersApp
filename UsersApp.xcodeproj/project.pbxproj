@@ -19,6 +19,7 @@
 		383BC42F23846F9300C8AB2D /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BC42E23846F9300C8AB2D /* TextFieldStyle.swift */; };
 		383BC4312384703000C8AB2D /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BC4302384703000C8AB2D /* EmailValidator.swift */; };
 		383BC4332384704700C8AB2D /* ValueValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BC4322384704700C8AB2D /* ValueValidatorProtocol.swift */; };
+		3896C9D5238C219200121848 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896C9D4238C219200121848 /* Assets.swift */; };
 		38D2F2E02383531000634260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D2F2DF2383531000634260 /* AppDelegate.swift */; };
 		38D2F2E72383531000634260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D2F2E52383531000634260 /* Main.storyboard */; };
 		38D2F2E92383531200634260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D2F2E82383531200634260 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		383BC42E23846F9300C8AB2D /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		383BC4302384703000C8AB2D /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		383BC4322384704700C8AB2D /* ValueValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueValidatorProtocol.swift; sourceTree = "<group>"; };
+		3896C9D4238C219200121848 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		38D2F2DC2383531000634260 /* UsersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D2F2DF2383531000634260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38D2F2E62383531000634260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +103,17 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
+		3896C9D0238C1FCA00121848 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3896C9D4238C219200121848 /* Assets.swift */,
+				38D2F2DF2383531000634260 /* AppDelegate.swift */,
+				383BC41823835BCC00C8AB2D /* SceneDelegate.swift */,
+				38D2F2E82383531200634260 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		38D2F2D32383531000634260 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +135,7 @@
 		38D2F2DE2383531000634260 /* UsersApp */ = {
 			isa = PBXGroup;
 			children = (
+				3896C9D0238C1FCA00121848 /* Resources */,
 				383BC41B23835C3900C8AB2D /* Network */,
 				383BC4152383599400C8AB2D /* Extension */,
 				38D2F2F9238354C400634260 /* Model */,
@@ -129,12 +143,9 @@
 				38D2F2F52383535600634260 /* View */,
 				38D2F2F42383534E00634260 /* Controller */,
 				38D2F2F32383534500634260 /* Manager */,
-				38D2F2DF2383531000634260 /* AppDelegate.swift */,
-				383BC41823835BCC00C8AB2D /* SceneDelegate.swift */,
-				38D2F2ED2383531200634260 /* Info.plist */,
 				38D2F2E52383531000634260 /* Main.storyboard */,
 				38D2F2EA2383531200634260 /* LaunchScreen.storyboard */,
-				38D2F2E82383531200634260 /* Assets.xcassets */,
+				38D2F2ED2383531200634260 /* Info.plist */,
 			);
 			path = UsersApp;
 			sourceTree = "<group>";
@@ -332,6 +343,7 @@
 				383BC41D23835C4500C8AB2D /* RequestService.swift in Sources */,
 				383BC42B23846F2000C8AB2D /* TextField.swift in Sources */,
 				383BC4332384704700C8AB2D /* ValueValidatorProtocol.swift in Sources */,
+				3896C9D5238C219200121848 /* Assets.swift in Sources */,
 				383BC41923835BCC00C8AB2D /* SceneDelegate.swift in Sources */,
 				383BC42D23846F7500C8AB2D /* TextFieldType.swift in Sources */,
 				383BC417238359A600C8AB2D /* Array+.swift in Sources */,

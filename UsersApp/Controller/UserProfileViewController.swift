@@ -9,10 +9,17 @@
 import UIKit
 
 class UserProfileViewController: UIViewController {
+    
+    // MARK: - UI
+    
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var firstNameField: TextField!
+    @IBOutlet weak var lastNameField: TextField!
+    @IBOutlet weak var emailField: TextField!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
