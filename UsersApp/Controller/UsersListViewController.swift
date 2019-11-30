@@ -16,6 +16,7 @@ class UsersListViewController: UIViewController {
     private enum Constants {
         static let cellName = "UserListCell"
         static let rowHeight: CGFloat = 60
+        static let profileSegue = "UserProfile"
     }
     
     // MARK: - UI components
@@ -30,6 +31,8 @@ class UsersListViewController: UIViewController {
         }
     }
     
+    private var profileInputData: NewUser?
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -37,6 +40,12 @@ class UsersListViewController: UIViewController {
         configureTableView()
         loadData()
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? UserProfileViewController {
+            destination.inputData = profileInputData
+        }
     }
     
     // MARK: - Configurations
@@ -59,7 +68,15 @@ class UsersListViewController: UIViewController {
 
 extension UsersListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        guard let viewModel = viewModels[safe: indexPath.row] else {
+            tableView.deselectRow(at: indexPath, animated: true)
+            return
+        }
+        profileInputData = NewUser(firstName: viewModel.firstName,
+                                   lastName: viewModel.lastName,
+                                   email: viewModel.email,
+                                   avatarUrl: nil)
+        performSegue(withIdentifier: Constants.profileSegue, sender: self)
     }
 }
 
@@ -75,8 +92,8 @@ extension UsersListViewController: UITableViewDataSource {
         cell.viewModel = viewModels[safe: indexPath.row]
         return cell
     }
-        
-        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.rowHeight
     }
     
@@ -93,6 +110,7 @@ extension UsersListViewController {
                 self.viewModels = data.map { UserListCellVM(data: $0) }
                 break
             case let .failure(error):
+                print(error.localizedDescription)
                 break
             }
         }

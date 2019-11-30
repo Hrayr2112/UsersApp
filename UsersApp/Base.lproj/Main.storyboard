@@ -2,7 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aJU-Yv-z1S">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,16 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qrb-pI-gSv">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qrb-pI-gSv">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="Colors/dark"/>
+                                <color key="separatorColor" name="Colors/white"/>
+                                <color key="sectionIndexBackgroundColor" name="Colors/dark"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Tck-ck-tPk"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="3WR-5h-KZ9"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Colors/dark"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qrb-pI-gSv" secondAttribute="trailing" id="a7E-v2-47R"/>
                             <constraint firstItem="Qrb-pI-gSv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ec9-NM-ZEG"/>
@@ -35,6 +38,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="w0i-vs-EJ9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0s0-4S-LRr">
+                            <color key="tintColor" name="Colors/white"/>
                             <connections>
                                 <action selector="createUserButtonTapped:" destination="BYZ-38-t0r" id="HdG-PY-rs2"/>
                             </connections>
@@ -60,8 +64,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="79G-OB-dKt">
                                 <rect key="frame" x="20" y="336" width="374" height="180"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jLO-MC-9Xb" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jLO-MC-9Xb" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="rT7-xR-psr"/>
                                         </constraints>
@@ -71,16 +76,18 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="animatesPlaceholder" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gH-SM-tTl" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gH-SM-tTl" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="65" width="374" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="RSP-Ps-XYd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cL4-zV-C8A" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cL4-zV-C8A" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="130" width="374" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="osk-hT-zmW"/>
                                         </constraints>
@@ -98,13 +105,19 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWN-es-KUb">
                                 <rect key="frame" x="0.0" y="810" width="414" height="52"/>
+                                <color key="backgroundColor" name="Colors/neonRed"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Sdg-pl-wfH"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Создать">
+                                    <color key="titleColor" name="Colors/white"/>
+                                </state>
+                                <connections>
+                                    <action selector="createButtonTapped:" destination="FUc-7Z-mDK" eventType="touchUpInside" id="SOI-ta-5qT"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Colors/dark"/>
                         <constraints>
                             <constraint firstItem="4f0-tR-56A" firstAttribute="bottom" secondItem="yWN-es-KUb" secondAttribute="bottom" id="8sa-6G-UiQ"/>
                             <constraint firstItem="4f0-tR-56A" firstAttribute="trailing" secondItem="yWN-es-KUb" secondAttribute="trailing" id="JyC-Hc-Xec"/>
@@ -146,4 +159,15 @@
             <point key="canvasLocation" x="-594" y="48"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="Colors/dark">
+            <color red="0.059000000357627869" green="0.059000000357627869" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Colors/neonRed">
+            <color red="0.92900002002716064" green="0.10599999874830246" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Colors/white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

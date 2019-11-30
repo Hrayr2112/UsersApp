@@ -25,6 +25,14 @@ struct UserListCellVM {
     var fullName: String {
         return data.firstName + " " + data.lastName
     }
+    
+    var firstName: String {
+        return data.firstName
+    }
+    
+    var lastName: String {
+        return data.lastName
+    }
 
     var email: String {
         return data.email

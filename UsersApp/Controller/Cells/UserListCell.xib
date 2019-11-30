@@ -2,7 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,25 +34,36 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTo-Ce-U36">
                                         <rect key="frame" x="0.0" y="0.0" width="229" height="29.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="Colors/white"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qy3-eu-Wrd">
                                         <rect key="frame" x="0.0" y="29.5" width="229" height="29.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="Colors/slateGrey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                         </subviews>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1Y-Lo-5l4">
+                        <rect key="frame" x="10" y="78" width="289" height="1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="mB4-iT-ovE"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" name="Colors/dark"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="bmK-Kn-fvf" secondAttribute="trailing" id="DnW-bD-gT8"/>
                     <constraint firstItem="bmK-Kn-fvf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="PVl-2y-COS"/>
+                    <constraint firstItem="s1Y-Lo-5l4" firstAttribute="leading" secondItem="bmK-Kn-fvf" secondAttribute="leading" id="Z4M-MD-dBw"/>
+                    <constraint firstAttribute="trailing" secondItem="s1Y-Lo-5l4" secondAttribute="trailing" constant="12" id="lIy-pD-SwR"/>
                     <constraint firstItem="bmK-Kn-fvf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="oLF-H8-UDF"/>
                     <constraint firstAttribute="bottom" secondItem="bmK-Kn-fvf" secondAttribute="bottom" constant="10" id="yQ9-GY-ZtF"/>
+                    <constraint firstAttribute="bottom" secondItem="s1Y-Lo-5l4" secondAttribute="bottom" id="zRX-aF-zRr"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -63,4 +75,15 @@
             <point key="canvasLocation" x="131.15942028985509" y="124.88839285714285"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="Colors/dark">
+            <color red="0.059000000357627869" green="0.059000000357627869" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Colors/slateGrey">
+            <color red="0.42699998617172241" green="0.42699998617172241" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Colors/white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
