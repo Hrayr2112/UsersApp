@@ -11,6 +11,7 @@ import Alamofire
 enum UserAction {
     case getUsers
     case create(user: NewUser)
+    case edit(user: NewUser, id: Int)
 }
 
 extension UserAction: APIAction {
@@ -21,6 +22,8 @@ extension UserAction: APIAction {
             return .get
         case .create:
             return .post
+        case .edit:
+            return .patch
         }
     }
     
@@ -28,6 +31,8 @@ extension UserAction: APIAction {
         switch self {
         case .getUsers, .create:
             return "/users"
+        case let .edit(_, id):
+            return "/user/\(id)"
         }
     }
     
@@ -35,11 +40,11 @@ extension UserAction: APIAction {
         switch self {
         case .getUsers:
             return [:]
-        case let .create(user):
+        case let .create(user), let .edit(user, _):
             return ["first_name": user.firstName,
                     "last_name": user.lastName,
                     "email": user.email,
-                    "avatar_url": user.avatarUrl ?? ""]
+                    "url": user.avatarUrl ?? ""]
         }
     }
     

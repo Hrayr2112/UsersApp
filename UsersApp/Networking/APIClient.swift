@@ -16,7 +16,7 @@ struct APIClient: APIClientProtocol {
     func request<T>(_ resource: Resource<T>, completion: @escaping (Result<T>) -> Void) {
         Alamofire
             .request(resource.request)
-            .responseData { (dataResponse) in
+            .responseData { dataResponse in
                 completion(dataResponse.result.flatMap2(resource.parse))
         }
     }

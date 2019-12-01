@@ -14,14 +14,15 @@ class UsersListViewController: UIViewController {
     // MARK: - Constants
     
     private enum Constants {
+        static let profileSegue = "UserProfile"
         static let cellName = "UserListCell"
         static let rowHeight: CGFloat = 60
-        static let profileSegue = "UserProfile"
     }
     
     // MARK: - UI components
     
     @IBOutlet private var tableView: UITableView!
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Variables
     
@@ -31,6 +32,7 @@ class UsersListViewController: UIViewController {
         }
     }
     
+    // Set this variable in order to pass userInfo to Profile page
     private var profileInputData: NewUser?
     
     // MARK: - Lifecycle
@@ -44,6 +46,7 @@ class UsersListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? UserProfileViewController {
+            destination.delegate = self
             destination.inputData = profileInputData
         }
     }
@@ -54,12 +57,24 @@ class UsersListViewController: UIViewController {
         tableView.register(cellType: UserListCell.self)
     }
     
+    private func showIndicator() {
+        activityIndicator.startAnimating()
+        tableView.isHidden = true
+    }
+    
+    private func hideIndicator() {
+        activityIndicator.stopAnimating()
+        tableView.isHidden = false
+    }
+    
     // MARK: - Actions
     
     @IBAction private func createUserButtonTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "UserProfileViewController")
-        navigationController?.pushViewController(controller, animated: true)
+        if let controller = storyboard.instantiateViewController(withIdentifier: "\(UserProfileViewController.self)") as? UserProfileViewController {
+            controller.delegate = self
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
     
 }
@@ -68,14 +83,14 @@ class UsersListViewController: UIViewController {
 
 extension UsersListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         guard let viewModel = viewModels[safe: indexPath.row] else {
-            tableView.deselectRow(at: indexPath, animated: true)
             return
         }
         profileInputData = NewUser(firstName: viewModel.firstName,
                                    lastName: viewModel.lastName,
                                    email: viewModel.email,
-                                   avatarUrl: nil)
+                                   avatarUrl: viewModel.avatarUrl?.absoluteString ?? "")
         performSegue(withIdentifier: Constants.profileSegue, sender: self)
     }
 }
@@ -103,8 +118,10 @@ extension UsersListViewController: UITableViewDataSource {
 
 extension UsersListViewController {
     func loadData() {
+        showIndicator()
         let model = ApiService()
         model.getUsers { result in
+            self.hideIndicator()
             switch result {
             case let .success(data):
                 self.viewModels = data.map { UserListCellVM(data: $0) }
@@ -115,4 +132,14 @@ extension UsersListViewController {
             }
         }
     }
+}
+
+// MARK: - UserProfileDelegate
+
+extension UsersListViewController: UserProfileDelegate {
+    
+    func reloadUsersData() {
+        loadData()
+    }
+    
 }

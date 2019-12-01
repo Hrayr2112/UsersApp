@@ -24,4 +24,8 @@ struct ApiService {
     func create(user: NewUser, _ completion: @escaping (Result<User>) -> Void) {
         api.request(NewUserResource(with: user), completion: completion)
     }
+    
+    func edit(user: NewUser, _ completion: @escaping (Result<User>) -> Void) {
+        api.request(NewUserResource(with: user), completion: completion)
+    }
 }

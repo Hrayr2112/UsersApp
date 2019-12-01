@@ -20,11 +20,20 @@ protocol APIAction: URLRequestConvertible {
 
 extension APIAction {
     func asURLRequest() throws -> URLRequest {
-        let originalRequest = try URLRequest(url: baseURL.appending(path),
+        var originalRequest = try URLRequest(url: baseURL.appending(path),
                                              method: method,
                                              headers: authHeader)
-        let encodedRequest = try encoding.encode(originalRequest,
-                                                 with: bodyParameters)
+        var params: [String: Any]?
+        if !bodyParameters.isEmpty {
+            params = nil
+            do {
+                let json = try JSONSerialization.data(withJSONObject: bodyParameters, options: [])
+                originalRequest.httpBody = json
+            } catch {
+                print("Bad request")
+            }
+        }
+        let encodedRequest = try encoding.encode(originalRequest, with: params)
         return encodedRequest
     }
 }

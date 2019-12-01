@@ -17,7 +17,7 @@ struct User: Decodable {
     let avatarUrl: String?
     let createdAt: String
     let updatedAt: String
-    let url: String
+    let url: String?
     
     enum CodingKeys: String, CodingKey {
       case id, email, url
