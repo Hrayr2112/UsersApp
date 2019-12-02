@@ -11,8 +11,6 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureNavigationBar()
         return true
@@ -42,5 +40,5 @@ extension AppDelegate {
         UINavigationBar.appearance().tintColor = Asset.Colors.white.color
         UINavigationBar.appearance().isTranslucent = false
     }
-    
+
 }

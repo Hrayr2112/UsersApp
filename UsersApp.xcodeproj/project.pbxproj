@@ -28,6 +28,7 @@
 		384335B323953D2B00D28AB2 /* GenerateResource.sh in Resources */ = {isa = PBXBuildFile; fileRef = 384335B223953D2B00D28AB2 /* GenerateResource.sh */; };
 		384335B623953E7000D28AB2 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384335B423953E7000D28AB2 /* Assets.swift */; };
 		384335B723953E7000D28AB2 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384335B523953E7000D28AB2 /* L10n.swift */; };
+		3887168623956A9A006829AC /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887168523956A9A006829AC /* KeyboardHelper.swift */; };
 		38D2F2E02383531000634260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D2F2DF2383531000634260 /* AppDelegate.swift */; };
 		38D2F2E72383531000634260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D2F2E52383531000634260 /* Main.storyboard */; };
 		38D2F2E92383531200634260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D2F2E82383531200634260 /* Assets.xcassets */; };
@@ -62,6 +63,7 @@
 		384335B223953D2B00D28AB2 /* GenerateResource.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = GenerateResource.sh; sourceTree = "<group>"; };
 		384335B423953E7000D28AB2 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		384335B523953E7000D28AB2 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		3887168523956A9A006829AC /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
 		38D2F2DC2383531000634260 /* UsersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D2F2DF2383531000634260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38D2F2E62383531000634260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			children = (
 				383BC4302384703000C8AB2D /* EmailValidator.swift */,
 				383BC4322384704700C8AB2D /* ValueValidatorProtocol.swift */,
+				3887168523956A9A006829AC /* KeyboardHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				383BC4312384703000C8AB2D /* EmailValidator.swift in Sources */,
 				383BC42023836CBB00C8AB2D /* UserAction.swift in Sources */,
 				38D2F3022383558100634260 /* UserListCellVM.swift in Sources */,
+				3887168623956A9A006829AC /* KeyboardHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

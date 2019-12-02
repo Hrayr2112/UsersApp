@@ -14,6 +14,12 @@ protocol UserProfileDelegate: AnyObject {
 
 class UserProfileViewController: UIViewController {
     
+    // MARK: - Constants
+    
+    private enum Constants {
+        static let bottomConstraintDefaultValue: CGFloat = 30
+    }
+    
     // MARK: - UI
     
     @IBOutlet private var avatarImageView: UIImageView!
@@ -22,10 +28,15 @@ class UserProfileViewController: UIViewController {
     @IBOutlet private var emailField: TextField!
     @IBOutlet private var confirmButton: UIButton!
     @IBOutlet private var chooseAvatarButton: UIButton!
+    @IBOutlet private var bottomConstraint: NSLayoutConstraint!
     
     // MARK: - Components
     
     private let imagePicker = UIImagePickerController()
+    
+    // MARK: - Helpers
+    
+    private let keyboardHelper = KeyboardHelper()
     
     // MARK: - Variables
     
@@ -35,6 +46,8 @@ class UserProfileViewController: UIViewController {
     private var textFields: [TextField] {
         return [firstNameField, lastNameField, emailField]
     }
+    
+    private var selectedImageURL: String?
     
     // MARK: - Validation
     
@@ -63,6 +76,7 @@ class UserProfileViewController: UIViewController {
         updateViews()
         refreshConfirmButton()
         configureSubviews()
+        configureKeyboard()
     }
     
     // MARK: - Configurations
@@ -73,9 +87,30 @@ class UserProfileViewController: UIViewController {
             lastNameField.text = inputData.lastName
             emailField.text = inputData.email
             confirmButton.setTitle(L10n.Profile.ConfirmButton.change, for: .normal)
-            chooseAvatarButton.setTitle(L10n.Profile.AvatarButton.change, for: .normal)
         } else {
             confirmButton.setTitle(L10n.Profile.ConfirmButton.create, for: .normal)
+        }
+        configureAvatarView(with: inputData?.avatarUrl)
+    }
+    
+    private func configureKeyboard() {
+        keyboardHelper.eventClosure = { [weak self] event, height in
+            guard let self = self else { return }
+            switch event {
+            case .willShow:
+                self.bottomConstraint.constant = height - self.view.safeAreaInsets.bottom + Constants.bottomConstraintDefaultValue
+            case .willHide:
+                self.bottomConstraint.constant = height + Constants.bottomConstraintDefaultValue
+            }
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    private func configureAvatarView(with urlString: String?) {
+        if let urlString = urlString, let avatarUrl = URL(string: urlString) {
+            avatarImageView.setImage(with: avatarUrl)
+            chooseAvatarButton.setTitle(L10n.Profile.AvatarButton.change, for: .normal)
+        } else {
             chooseAvatarButton.setTitle(L10n.Profile.AvatarButton.choose, for: .normal)
         }
     }
@@ -102,7 +137,7 @@ class UserProfileViewController: UIViewController {
             let email = emailField.text else { return }
         
         let model = ApiService()
-        let user = NewUser(firstName: firstName, lastName: lastName, email: email, avatarUrl: "")
+        let user = NewUser(firstName: firstName, lastName: lastName, email: email, avatarUrl: selectedImageURL ?? "")
         
         if let id = inputData?.id {
             model.edit(user: user, id: id) { user in
@@ -173,6 +208,7 @@ extension UserProfileViewController: UIImagePickerControllerDelegate, UINavigati
             avatarImageView.image = pickedImage
             chooseAvatarButton.setTitle(L10n.Profile.AvatarButton.change, for: .normal)
         }
+        
         dismiss(animated: true, completion: nil)
     }
 
