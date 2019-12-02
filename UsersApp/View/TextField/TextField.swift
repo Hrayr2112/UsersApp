@@ -76,8 +76,7 @@ class TextField: MFTextField, UITextFieldDelegate {
     var validationError: String? {
         didSet {
             if let error = validationError {
-                let customError = CustomError(value: error)
-                setError(customError, animated: true)
+                placeholder = error
                 tintColor = .red
             } else {
                 placeholder = placeholderText

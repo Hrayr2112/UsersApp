@@ -134,6 +134,8 @@ class UserProfileViewController: UIViewController {
     private func refreshConfirmButton() {
         confirmButton.isEnabled = hasChanges && isFilled
         confirmButton.backgroundColor = confirmButton.isEnabled ? Asset.Colors.neon.color : Asset.Colors.slateGrey.color
+        confirmButton.setTitleColor(confirmButton.isEnabled ? Asset.Colors.white.color : Asset.Colors.slateGreyTwo.color,
+                                    for: .normal)
     }
     
     // MARK: - Routing

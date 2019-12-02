@@ -29,9 +29,9 @@
 
 // TextField
 
-"text-field.holder.first-name" = "First Name";
-"text-field.holder.last-name" = "Last Name";
-"text-field.holder.emil" = "Email";
+"text-field.holder.first-name" = "First Name*";
+"text-field.holder.last-name" = "Last Name*";
+"text-field.holder.emil" = "Email*";
 
 // Error
 

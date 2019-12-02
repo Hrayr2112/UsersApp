@@ -87,13 +87,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="810"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsk-CT-9NL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="398"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="279"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="81" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="79G-OB-dKt">
-                                                <rect key="frame" x="30" y="198" width="354" height="200"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="81" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="79G-OB-dKt">
+                                                <rect key="frame" x="30" y="198" width="354" height="81"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jLO-MC-9Xb" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="56.5"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="354" placeholderIntrinsicHeight="17" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jLO-MC-9Xb" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -102,8 +102,8 @@
                                                             <outlet property="delegate" destination="bgt-Z4-E74" id="mQI-i9-QAp"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gH-SM-tTl" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="71.5" width="354" height="57"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="354" placeholderIntrinsicHeight="17" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gH-SM-tTl" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="32" width="354" height="17"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -112,8 +112,8 @@
                                                             <outlet property="delegate" destination="bgt-Z4-E74" id="pCr-5H-hrj"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cL4-zV-C8A" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="143.5" width="354" height="56.5"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="354" placeholderIntrinsicHeight="17" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cL4-zV-C8A" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="64" width="354" height="17"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -123,9 +123,6 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="wg9-aZ-cm9"/>
-                                                </constraints>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sWj-u3-3Ed">
                                                 <rect key="frame" x="143" y="0.0" width="128" height="128"/>
