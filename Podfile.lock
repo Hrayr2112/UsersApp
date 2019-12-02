@@ -9,14 +9,12 @@ PODS:
     - Reusable/View (= 4.1.0)
   - Reusable/Storyboard (4.1.0)
   - Reusable/View (4.1.0)
-  - SwiftGen (6.1.0)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher
   - MaterialTextField
   - Reusable
-  - SwiftGen
 
 SPEC REPOS:
   trunk:
@@ -24,15 +22,13 @@ SPEC REPOS:
     - Kingfisher
     - MaterialTextField
     - Reusable
-    - SwiftGen
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Kingfisher: eb36b7dfcc78d60877051c92c119a2865972961a
   MaterialTextField: f1a0786588e4d3610cb9bb62d2adbe9777cebbf9
   Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
-  SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
 
-PODFILE CHECKSUM: bef44ff1209fe01eaf3e7be1036319544c970b91
+PODFILE CHECKSUM: 4b3277f9695004da00611bcc3b5d3b24faaf954c
 
 COCOAPODS: 1.8.4

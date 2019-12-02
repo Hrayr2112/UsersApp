@@ -16,7 +16,7 @@ class UsersListViewController: UIViewController {
     private enum Constants {
         static let profileSegue = "UserProfile"
         static let cellName = "UserListCell"
-        static let rowHeight: CGFloat = 60
+        static let rowHeight: CGFloat = 80
     }
     
     // MARK: - UI components

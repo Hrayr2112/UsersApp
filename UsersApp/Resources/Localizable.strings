@@ -7,3 +7,12 @@
 */
 
 "navigation-bar" = "Back";
+"users-list.title" = "Users";
+"profile.confirm-button.create" = "Create";
+"profile.confirm-button.change" = "Change";
+"profile.avatar-button.choose" = "Choose";
+"profile.avatar-button.change" = "Change";
+"validation.empty.first-name" = "First name must have at least one character";
+"validation.empty.last-name" = "Last name must have at least one character";
+"validation.incorrect-email" = "Incorrect email";
+

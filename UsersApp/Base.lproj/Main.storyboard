@@ -139,7 +139,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3K-Rt-8vb">
                                 <rect key="frame" x="143" y="178" width="128" height="128"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Choose">
+                                    <color key="titleColor" name="Colors/white"/>
+                                </state>
                                 <connections>
                                     <action selector="pickerButtonTapped:" destination="FUc-7Z-mDK" eventType="touchUpInside" id="1By-Hx-wd1"/>
                                 </connections>
@@ -165,6 +167,7 @@
                     <navigationItem key="navigationItem" id="jkm-dw-JOz"/>
                     <connections>
                         <outlet property="avatarImageView" destination="sWj-u3-3Ed" id="b63-sU-5p3"/>
+                        <outlet property="chooseAvatarButton" destination="q3K-Rt-8vb" id="alq-7Q-1mT"/>
                         <outlet property="confirmButton" destination="yWN-es-KUb" id="lJG-NW-0Rs"/>
                         <outlet property="emailField" destination="cL4-zV-C8A" id="u8a-q5-sC0"/>
                         <outlet property="firstNameField" destination="jLO-MC-9Xb" id="YTO-Dt-kzh"/>

@@ -17,7 +17,7 @@ class EmailValidator: ValueValidator {
         if emailTest.evaluate(with: text) {
             return nil
         } else {
-            return "Incorrect email"
+            return L10n.Validation.incorrectEmail
         }
     }
     
