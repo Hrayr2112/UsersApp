@@ -29,6 +29,10 @@
 		384335B623953E7000D28AB2 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384335B423953E7000D28AB2 /* Assets.swift */; };
 		384335B723953E7000D28AB2 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384335B523953E7000D28AB2 /* L10n.swift */; };
 		3887168623956A9A006829AC /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887168523956A9A006829AC /* KeyboardHelper.swift */; };
+		388716892395926D006829AC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388716882395926D006829AC /* LoadingView.swift */; };
+		3887168B2395927D006829AC /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3887168A2395927D006829AC /* LoadingView.xib */; };
+		3887168E23959317006829AC /* NibInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887168D23959317006829AC /* NibInitializable.swift */; };
+		3887169023959349006829AC /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887168F23959349006829AC /* UIView+.swift */; };
 		38D2F2E02383531000634260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D2F2DF2383531000634260 /* AppDelegate.swift */; };
 		38D2F2E72383531000634260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D2F2E52383531000634260 /* Main.storyboard */; };
 		38D2F2E92383531200634260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D2F2E82383531200634260 /* Assets.xcassets */; };
@@ -64,6 +68,10 @@
 		384335B423953E7000D28AB2 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		384335B523953E7000D28AB2 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		3887168523956A9A006829AC /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
+		388716882395926D006829AC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		3887168A2395927D006829AC /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		3887168D23959317006829AC /* NibInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibInitializable.swift; sourceTree = "<group>"; };
+		3887168F23959349006829AC /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		38D2F2DC2383531000634260 /* UsersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D2F2DF2383531000634260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38D2F2E62383531000634260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +106,7 @@
 				383BC416238359A600C8AB2D /* Array+.swift */,
 				383BC42123836D0B00C8AB2D /* Alamofire+.swift */,
 				383BC423238465D200C8AB2D /* UIImageView+.swift */,
+				3887168F23959349006829AC /* UIView+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -122,6 +131,23 @@
 				383BC42E23846F9300C8AB2D /* TextFieldStyle.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		388716872395924D006829AC /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				388716882395926D006829AC /* LoadingView.swift */,
+				3887168A2395927D006829AC /* LoadingView.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		3887168C23959304006829AC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3887168D23959317006829AC /* NibInitializable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		3896C9D0238C1FCA00121848 /* Resources */ = {
@@ -159,6 +185,7 @@
 		38D2F2DE2383531000634260 /* UsersApp */ = {
 			isa = PBXGroup;
 			children = (
+				3887168C23959304006829AC /* Protocols */,
 				3896C9D0238C1FCA00121848 /* Resources */,
 				383BC41B23835C3900C8AB2D /* Networking */,
 				383BC4152383599400C8AB2D /* Extension */,
@@ -194,6 +221,7 @@
 		38D2F2F52383535600634260 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				388716872395924D006829AC /* LoadingView */,
 				383BC42923846F0F00C8AB2D /* TextField */,
 			);
 			path = View;
@@ -311,6 +339,7 @@
 				384335B323953D2B00D28AB2 /* GenerateResource.sh in Resources */,
 				38D2F3002383557000634260 /* UserListCell.xib in Resources */,
 				38D2F2EC2383531200634260 /* LaunchScreen.storyboard in Resources */,
+				3887168B2395927D006829AC /* LoadingView.xib in Resources */,
 				38D2F2E92383531200634260 /* Assets.xcassets in Resources */,
 				38D2F2E72383531000634260 /* Main.storyboard in Resources */,
 			);
@@ -398,12 +427,15 @@
 				384335B723953E7000D28AB2 /* L10n.swift in Sources */,
 				384335942392875C00D28AB2 /* APIClient.swift in Sources */,
 				38D2F2FF2383557000634260 /* UserListCell.swift in Sources */,
+				388716892395926D006829AC /* LoadingView.swift in Sources */,
 				38433590239286F600D28AB2 /* Resource.swift in Sources */,
 				383BC41D23835C4500C8AB2D /* RequestService.swift in Sources */,
 				383BC42B23846F2000C8AB2D /* TextField.swift in Sources */,
 				383BC4332384704700C8AB2D /* ValueValidatorProtocol.swift in Sources */,
+				3887169023959349006829AC /* UIView+.swift in Sources */,
 				383BC41923835BCC00C8AB2D /* SceneDelegate.swift in Sources */,
 				383BC42D23846F7500C8AB2D /* TextFieldType.swift in Sources */,
+				3887168E23959317006829AC /* NibInitializable.swift in Sources */,
 				383BC417238359A600C8AB2D /* Array+.swift in Sources */,
 				38D2F2E02383531000634260 /* AppDelegate.swift in Sources */,
 				38D2F2F8238353FB00634260 /* UsersListViewController.swift in Sources */,

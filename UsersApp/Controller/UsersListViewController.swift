@@ -22,7 +22,7 @@ class UsersListViewController: UIViewController {
     // MARK: - UI components
     
     @IBOutlet private var tableView: UITableView!
-    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet private var loadingView: LoadingView!
     
     // MARK: - Variables
     
@@ -55,16 +55,6 @@ class UsersListViewController: UIViewController {
     
     private func configureTableView() {
         tableView.register(cellType: UserListCell.self)
-    }
-    
-    private func showIndicator() {
-        activityIndicator.startAnimating()
-        tableView.isHidden = true
-    }
-    
-    private func hideIndicator() {
-        activityIndicator.stopAnimating()
-        tableView.isHidden = false
     }
     
     // MARK: - Actions
@@ -119,16 +109,15 @@ extension UsersListViewController: UITableViewDataSource {
 
 extension UsersListViewController {
     func loadData() {
-        showIndicator()
+        loadingView.startLoading()
         let model = ApiService()
         model.getUsers { result in
-            self.hideIndicator()
+            self.loadingView.stopLoading()
             switch result {
             case let .success(data):
                 self.viewModels = data.map { UserListCellVM(data: $0) }
-                break
             case let .failure(error):
-                print(error.localizedDescription)
+                // TODO: Show alert with error
                 break
             }
         }
@@ -141,6 +130,10 @@ extension UsersListViewController: UserProfileDelegate {
     
     func reloadUsersData() {
         loadData()
+    }
+
+    func showError(message: String) {
+        // TODO: Show alert with error
     }
     
 }

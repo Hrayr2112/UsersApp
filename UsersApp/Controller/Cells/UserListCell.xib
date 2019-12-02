@@ -47,7 +47,7 @@
                         </subviews>
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1Y-Lo-5l4">
-                        <rect key="frame" x="8" y="76" width="269" height="1"/>
+                        <rect key="frame" x="8" y="76" width="295" height="1"/>
                         <color key="backgroundColor" name="Colors/neon"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="mB4-iT-ovE"/>
@@ -60,7 +60,7 @@
                     <constraint firstItem="cWb-Wj-iUU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="96x-3O-hnW"/>
                     <constraint firstItem="s1Y-Lo-5l4" firstAttribute="leading" secondItem="cWb-Wj-iUU" secondAttribute="leading" id="KKV-ab-ScM"/>
                     <constraint firstAttribute="trailing" secondItem="cWb-Wj-iUU" secondAttribute="trailing" constant="8" id="bpL-GZ-xX6"/>
-                    <constraint firstAttribute="trailing" secondItem="s1Y-Lo-5l4" secondAttribute="trailing" constant="34" id="hIk-pp-qyy"/>
+                    <constraint firstAttribute="trailing" secondItem="s1Y-Lo-5l4" secondAttribute="trailing" constant="8" id="hIk-pp-qyy"/>
                     <constraint firstItem="s1Y-Lo-5l4" firstAttribute="top" secondItem="cWb-Wj-iUU" secondAttribute="bottom" constant="7" id="nu7-tg-QEl"/>
                     <constraint firstAttribute="bottom" secondItem="s1Y-Lo-5l4" secondAttribute="bottom" constant="2" id="vec-uY-GCA"/>
                 </constraints>

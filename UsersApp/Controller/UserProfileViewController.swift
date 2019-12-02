@@ -10,6 +10,7 @@ import UIKit
 
 protocol UserProfileDelegate: AnyObject {
     func reloadUsersData()
+    func showError(message: String)
 }
 
 class UserProfileViewController: UIViewController {
@@ -28,6 +29,7 @@ class UserProfileViewController: UIViewController {
     @IBOutlet private var emailField: TextField!
     @IBOutlet private var confirmButton: UIButton!
     @IBOutlet private var chooseAvatarButton: UIButton!
+    @IBOutlet private var loadinView: LoadingView!
     @IBOutlet private var bottomConstraint: NSLayoutConstraint!
     
     // MARK: - Components
@@ -50,6 +52,7 @@ class UserProfileViewController: UIViewController {
     }
     
     private var selectedImageURL: String?
+    private let requestService = ApiService()
     
     // MARK: - Validation
     
@@ -132,11 +135,6 @@ class UserProfileViewController: UIViewController {
         confirmButton.backgroundColor = confirmButton.isEnabled ? Asset.Colors.neon.color : Asset.Colors.slateGrey.color
     }
     
-    @objc
-    private func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
     // MARK: - Routing
     
     private func roteToListAfterSuccess() {
@@ -150,18 +148,20 @@ class UserProfileViewController: UIViewController {
 
 extension UserProfileViewController {
     
+    @objc
+    private func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
     @IBAction func createButtonTapped(_ sender: Any) {
         guard let firstName = firstNameField.text,
             let lastName = lastNameField.text,
             let email = emailField.text else { return }
         
-        let model = ApiService()
         let user = NewUser(firstName: firstName, lastName: lastName, email: email, avatarUrl: selectedImageURL ?? "")
         
         if let id = inputData?.id {
-            model.edit(user: user, id: id) { user in
-                self.roteToListAfterSuccess()
-            }
+            edit(user: user, id: id)
         } else {
             if let incorrectEmail = EmailValidator().validate(text: email) {
                 emailField.validationError = incorrectEmail
@@ -176,9 +176,7 @@ extension UserProfileViewController {
             }
 
             if isValid {
-                model.create(user: user) { user in
-                    self.roteToListAfterSuccess()
-                }
+                create(user: user)
             }
         }
     }
@@ -201,6 +199,42 @@ extension UserProfileViewController {
             break
         }
         refreshConfirmButton()
+    }
+    
+}
+
+// MARK: - API
+
+extension UserProfileViewController {
+    
+    private func create(user: NewUser) {
+        loadinView.startLoading()
+        dismissKeyboard()
+        requestService.create(user: user) { result in
+            self.loadinView.stopLoading()
+            switch result {
+            case .success:
+                self.roteToListAfterSuccess()
+            case let .failure(error):
+                self.delegate?.showError(message: error.localizedDescription)
+                break
+            }
+        }
+    }
+    
+    private func edit(user: NewUser, id: Int) {
+        loadinView.startLoading()
+        dismissKeyboard()
+        requestService.edit(user: user, id: id) { result in
+            self.loadinView.stopLoading()
+            switch result {
+            case .success:
+                self.roteToListAfterSuccess()
+            case let .failure(error):
+                self.delegate?.showError(message: error.localizedDescription)
+                break
+            }
+        }
     }
     
 }
