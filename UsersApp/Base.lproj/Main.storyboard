@@ -141,7 +141,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sWj-u3-3Ed">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sWj-u3-3Ed">
                                                 <rect key="frame" x="143" y="0.0" width="128" height="128"/>
                                                 <color key="backgroundColor" name="Colors/charcoalGrey"/>
                                                 <constraints>

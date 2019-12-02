@@ -38,10 +38,12 @@ class UserProfileViewController: UIViewController {
     
     private let keyboardHelper = KeyboardHelper()
     
-    // MARK: - Variables
+    // MARK: - Public variables
     
     var inputData: NewUser?
     weak var delegate: UserProfileDelegate?
+    
+    // MARK: - Private variables
     
     private var textFields: [TextField] {
         return [firstNameField, lastNameField, emailField]
@@ -73,15 +75,21 @@ class UserProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateViews()
+        configureViews()
         refreshConfirmButton()
-        configureSubviews()
         configureKeyboard()
+        
+        // Set picker delegate
+        imagePicker.delegate = self
+        
+        // Tap tom dismiss keyboard
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     // MARK: - Configurations
     
-    private func updateViews() {
+    private func configureViews() {
         if let inputData = inputData {
             firstNameField.text = inputData.firstName
             lastNameField.text = inputData.lastName
@@ -107,6 +115,7 @@ class UserProfileViewController: UIViewController {
     }
     
     private func configureAvatarView(with urlString: String?) {
+        avatarImageView.layer.cornerRadius = avatarImageView.bounds.height / 2
         if let urlString = urlString, let avatarUrl = URL(string: urlString) {
             avatarImageView.setImage(with: avatarUrl)
             chooseAvatarButton.setTitle(L10n.Profile.AvatarButton.change, for: .normal)
@@ -115,21 +124,28 @@ class UserProfileViewController: UIViewController {
         }
     }
     
-    private func configureSubviews() {
-        avatarImageView.layer.cornerRadius = avatarImageView.bounds.height / 2
-        imagePicker.delegate = self
-        
-        // Tap tom dismiss keyboard
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-    
     private func refreshConfirmButton() {
         confirmButton.isEnabled = hasChanges && isFilled
         confirmButton.backgroundColor = confirmButton.isEnabled ? Asset.Colors.neonRed.color : Asset.Colors.slateGrey.color
     }
     
-    // MARK: - Actions
+    @objc
+    private func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    // MARK: - Routing
+    
+    private func roteToListAfterSuccess() {
+        self.delegate?.reloadUsersData()
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+}
+
+// MARK: - Actions
+
+extension UserProfileViewController {
     
     @IBAction func createButtonTapped(_ sender: Any) {
         guard let firstName = firstNameField.text,
@@ -182,18 +198,6 @@ class UserProfileViewController: UIViewController {
             break
         }
         refreshConfirmButton()
-    }
-    
-    @objc
-    private func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    
-    // MARK: - Routing
-    
-    private func roteToListAfterSuccess() {
-        self.delegate?.reloadUsersData()
-        self.navigationController?.popViewController(animated: true)
     }
     
 }
