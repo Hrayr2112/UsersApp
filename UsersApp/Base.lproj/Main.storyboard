@@ -79,19 +79,40 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="animatesPlaceholder" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="placeholderAnimatesOnFocus" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="FUc-7Z-mDK" eventType="editingChanged" id="0af-tZ-FvI"/>
+                                            <outlet property="delegate" destination="FUc-7Z-mDK" id="CP8-L4-zV6"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gH-SM-tTl" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="32" width="374" height="17"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="placeholderAnimatesOnFocus" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="animatesPlaceholder" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="FUc-7Z-mDK" eventType="editingChanged" id="LTv-cc-lu2"/>
+                                            <outlet property="delegate" destination="FUc-7Z-mDK" id="gf0-Xj-ydZ"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cL4-zV-C8A" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="64" width="374" height="17"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="placeholderAnimatesOnFocus" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="animatesPlaceholder" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="FUc-7Z-mDK" eventType="editingChanged" id="Yco-rB-CR8"/>
+                                            <outlet property="delegate" destination="FUc-7Z-mDK" id="Pq2-Bh-NAF"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -144,6 +165,7 @@
                     <navigationItem key="navigationItem" id="jkm-dw-JOz"/>
                     <connections>
                         <outlet property="avatarImageView" destination="sWj-u3-3Ed" id="b63-sU-5p3"/>
+                        <outlet property="confirmButton" destination="yWN-es-KUb" id="lJG-NW-0Rs"/>
                         <outlet property="emailField" destination="cL4-zV-C8A" id="u8a-q5-sC0"/>
                         <outlet property="firstNameField" destination="jLO-MC-9Xb" id="YTO-Dt-kzh"/>
                         <outlet property="lastNameField" destination="0gH-SM-tTl" id="86s-5G-8vw"/>

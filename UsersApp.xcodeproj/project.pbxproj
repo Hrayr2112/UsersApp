@@ -24,8 +24,10 @@
 		384335942392875C00D28AB2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384335932392875C00D28AB2 /* APIClient.swift */; };
 		384335962392879300D28AB2 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384335952392879300D28AB2 /* CustomError.swift */; };
 		384335982392990B00D28AB2 /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384335972392990B00D28AB2 /* NewUser.swift */; };
-		3843359A2392BE9400D28AB2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 384335992392BE9400D28AB2 /* Localizable.strings */; };
-		3896C9D5238C219200121848 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896C9D4238C219200121848 /* Assets.swift */; };
+		384335B123953CFF00D28AB2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 384335B023953CFF00D28AB2 /* Localizable.strings */; };
+		384335B323953D2B00D28AB2 /* GenerateResource.sh in Resources */ = {isa = PBXBuildFile; fileRef = 384335B223953D2B00D28AB2 /* GenerateResource.sh */; };
+		384335B623953E7000D28AB2 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384335B423953E7000D28AB2 /* Assets.swift */; };
+		384335B723953E7000D28AB2 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384335B523953E7000D28AB2 /* L10n.swift */; };
 		38D2F2E02383531000634260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D2F2DF2383531000634260 /* AppDelegate.swift */; };
 		38D2F2E72383531000634260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D2F2E52383531000634260 /* Main.storyboard */; };
 		38D2F2E92383531200634260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D2F2E82383531200634260 /* Assets.xcassets */; };
@@ -56,8 +58,10 @@
 		384335932392875C00D28AB2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		384335952392879300D28AB2 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		384335972392990B00D28AB2 /* NewUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUser.swift; sourceTree = "<group>"; };
-		384335992392BE9400D28AB2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		3896C9D4238C219200121848 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		384335B023953CFF00D28AB2 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		384335B223953D2B00D28AB2 /* GenerateResource.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = GenerateResource.sh; sourceTree = "<group>"; };
+		384335B423953E7000D28AB2 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		384335B523953E7000D28AB2 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		38D2F2DC2383531000634260 /* UsersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D2F2DF2383531000634260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38D2F2E62383531000634260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,11 +125,13 @@
 		3896C9D0238C1FCA00121848 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3896C9D4238C219200121848 /* Assets.swift */,
+				384335B423953E7000D28AB2 /* Assets.swift */,
+				384335B523953E7000D28AB2 /* L10n.swift */,
+				38D2F2E82383531200634260 /* Assets.xcassets */,
 				38D2F2DF2383531000634260 /* AppDelegate.swift */,
 				383BC41823835BCC00C8AB2D /* SceneDelegate.swift */,
-				38D2F2E82383531200634260 /* Assets.xcassets */,
-				384335992392BE9400D28AB2 /* Localizable.strings */,
+				384335B023953CFF00D28AB2 /* Localizable.strings */,
+				384335B223953D2B00D28AB2 /* GenerateResource.sh */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 			buildConfigurationList = 38D2F2F02383531200634260 /* Build configuration list for PBXNativeTarget "UsersApp" */;
 			buildPhases = (
 				EF25947B23E44C5EB29049CB /* [CP] Check Pods Manifest.lock */,
+				384335AF23953C8A00D28AB2 /* SwiftGen */,
 				38D2F2D82383531000634260 /* Sources */,
 				38D2F2D92383531000634260 /* Frameworks */,
 				38D2F2DA2383531000634260 /* Resources */,
@@ -297,7 +304,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3843359A2392BE9400D28AB2 /* Localizable.strings in Resources */,
+				384335B123953CFF00D28AB2 /* Localizable.strings in Resources */,
+				384335B323953D2B00D28AB2 /* GenerateResource.sh in Resources */,
 				38D2F3002383557000634260 /* UserListCell.xib in Resources */,
 				38D2F2EC2383531200634260 /* LaunchScreen.storyboard in Resources */,
 				38D2F2E92383531200634260 /* Assets.xcassets in Resources */,
@@ -308,6 +316,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		384335AF23953C8A00D28AB2 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/UsersApp/Resources/Localizable.string",
+				"$(SRCROOT)/UsersApp/Resources/Assets.xcassets",
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/UsersApp/Resources/Assets.swift",
+				"$(SRCROOT)/UsersApp/Resources/L10n.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh \"$SRCROOT/UsersApp/Resources/generateResource.sh\"\n";
+		};
 		B8DDA7A5BB247CFD647053FC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,19 +385,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				384335962392879300D28AB2 /* CustomError.swift in Sources */,
+				384335B623953E7000D28AB2 /* Assets.swift in Sources */,
 				383BC42223836D0B00C8AB2D /* Alamofire+.swift in Sources */,
 				383BC4282384694C00C8AB2D /* UserProfileViewController.swift in Sources */,
 				384335982392990B00D28AB2 /* NewUser.swift in Sources */,
 				383BC424238465D200C8AB2D /* UIImageView+.swift in Sources */,
 				384335922392872100D28AB2 /* APIAction.swift in Sources */,
 				383BC42F23846F9300C8AB2D /* TextFieldStyle.swift in Sources */,
+				384335B723953E7000D28AB2 /* L10n.swift in Sources */,
 				384335942392875C00D28AB2 /* APIClient.swift in Sources */,
 				38D2F2FF2383557000634260 /* UserListCell.swift in Sources */,
 				38433590239286F600D28AB2 /* Resource.swift in Sources */,
 				383BC41D23835C4500C8AB2D /* RequestService.swift in Sources */,
 				383BC42B23846F2000C8AB2D /* TextField.swift in Sources */,
 				383BC4332384704700C8AB2D /* ValueValidatorProtocol.swift in Sources */,
-				3896C9D5238C219200121848 /* Assets.swift in Sources */,
 				383BC41923835BCC00C8AB2D /* SceneDelegate.swift in Sources */,
 				383BC42D23846F7500C8AB2D /* TextFieldType.swift in Sources */,
 				383BC417238359A600C8AB2D /* Array+.swift in Sources */,

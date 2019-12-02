@@ -24,7 +24,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                 <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="TD0-W6-SnX"/>
                                     <constraint firstAttribute="width" secondItem="R13-75-cjM" secondAttribute="height" multiplier="1:1" id="j43-K2-j7X"/>
                                 </constraints>
                             </imageView>
@@ -47,6 +46,7 @@
                             </stackView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="R13-75-cjM" firstAttribute="height" secondItem="bmK-Kn-fvf" secondAttribute="height" id="AeX-qE-lY9"/>
                             <constraint firstAttribute="bottom" secondItem="CYh-5h-er5" secondAttribute="bottom" id="E9e-aq-xOH"/>
                         </constraints>
                     </stackView>

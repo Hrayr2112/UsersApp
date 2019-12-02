@@ -33,7 +33,7 @@ class TextField: MFTextField, UITextFieldDelegate {
         autocorrectionType = .no
         autocapitalizationType = .none
         textColor = .white
-        tintColor = .red
+        tintColor = .gray
         font = UIFont.systemFont(ofSize: 20)
         placeholderColor = .gray
 
@@ -78,12 +78,13 @@ class TextField: MFTextField, UITextFieldDelegate {
             if let error = validationError {
                 placeholder = error
                 placeholderColor = .red
-                textColor = .red
+                tintColor = .red
             } else {
                 placeholder = placeholderText
                 defaultPlaceholderColor = .gray
                 placeholderColor = .gray
                 textColor = .white
+                tintColor = .gray
             }
         }
     }

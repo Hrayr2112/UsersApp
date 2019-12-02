@@ -21,6 +21,7 @@ class UserListCell: UITableViewCell, NibReusable {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
         avatarImageView.layer.cornerRadius = avatarImageView.bounds.height / 2
     }
     
