@@ -27,6 +27,7 @@ internal enum Asset {
     internal static let neon = ColorAsset(name: "Colors/neon")
     internal static let neonRed = ColorAsset(name: "Colors/neonRed")
     internal static let slateGrey = ColorAsset(name: "Colors/slateGrey")
+    internal static let slateGreyTwo = ColorAsset(name: "Colors/slateGreyTwo")
     internal static let white = ColorAsset(name: "Colors/white")
   }
 }

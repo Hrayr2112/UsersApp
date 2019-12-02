@@ -39,11 +39,11 @@ internal enum L10n {
 
   internal enum TextField {
     internal enum Holder {
-      /// Email
+      /// Email*
       internal static let emil = L10n.tr("Localizable", "text-field.holder.emil")
-      /// First Name
+      /// First Name*
       internal static let firstName = L10n.tr("Localizable", "text-field.holder.first-name")
-      /// Last Name
+      /// Last Name*
       internal static let lastName = L10n.tr("Localizable", "text-field.holder.last-name")
     }
   }
