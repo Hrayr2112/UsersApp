@@ -87,7 +87,8 @@ extension UsersListViewController: UITableViewDelegate {
         guard let viewModel = viewModels[safe: indexPath.row] else {
             return
         }
-        profileInputData = NewUser(firstName: viewModel.firstName,
+        profileInputData = NewUser(id: viewModel.id,
+                                   firstName: viewModel.firstName,
                                    lastName: viewModel.lastName,
                                    email: viewModel.email,
                                    avatarUrl: viewModel.avatarUrl?.absoluteString ?? "")

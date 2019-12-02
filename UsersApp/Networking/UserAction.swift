@@ -32,7 +32,7 @@ extension UserAction: APIAction {
         case .getUsers, .create:
             return "/users"
         case let .edit(_, id):
-            return "/user/\(id)"
+            return "/users/\(id)"
         }
     }
     

@@ -104,8 +104,8 @@ class UserProfileViewController: UIViewController {
         let model = ApiService()
         let user = NewUser(firstName: firstName, lastName: lastName, email: email, avatarUrl: "")
         
-        if inputData != nil {
-            model.edit(user: user) { user in
+        if let id = inputData?.id {
+            model.edit(user: user, id: id) { user in
                 self.roteToListAfterSuccess()
             }
         } else {

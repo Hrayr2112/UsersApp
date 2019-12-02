@@ -52,4 +52,19 @@ class NewUserResource: Resource<User> {
         }
         
     }
+    
+    init(with user: NewUser, id: Int) {
+        super.init(request: UserAction.edit(user: user, id: id)) { response -> Result<User> in
+            if let data = response as? Data {
+                do {
+                    let decodedUser = try JSONDecoder().decode(User.self, from: data)
+                    return Result.success(decodedUser)
+                } catch {
+                    return Result.failure(CustomError(value: error.localizedDescription))
+                }
+            }
+            return Result.failure(CustomError(value: "No data"))
+        }
+        
+    }
 }

@@ -22,6 +22,10 @@ struct UserListCellVM {
     
     // MARK: - Public
 
+    var id: Int {
+        return data.id
+    }
+    
     var fullName: String {
         return data.firstName + " " + data.lastName
     }
