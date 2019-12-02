@@ -44,7 +44,7 @@ final class KeyboardHelper {
 
     @objc
     private func keyBoardWillHide(notification: NSNotification) {
-        eventClosure?(.willShow, .zero)
+        eventClosure?(.willHide, .zero)
      }
 
 }

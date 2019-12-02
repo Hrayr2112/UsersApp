@@ -76,13 +76,12 @@ class TextField: MFTextField, UITextFieldDelegate {
     var validationError: String? {
         didSet {
             if let error = validationError {
-                placeholder = error
-                placeholderColor = .red
+                let customError = CustomError(value: error)
+                setError(customError, animated: true)
                 tintColor = .red
             } else {
                 placeholder = placeholderText
                 defaultPlaceholderColor = .gray
-                placeholderColor = .gray
                 textColor = .white
                 tintColor = .gray
             }

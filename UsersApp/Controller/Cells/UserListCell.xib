@@ -32,7 +32,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTo-Ce-U36">
                                         <rect key="frame" x="0.0" y="0.0" width="220" height="30.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" name="Colors/white"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -47,8 +47,8 @@
                         </subviews>
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1Y-Lo-5l4">
-                        <rect key="frame" x="8" y="76" width="295" height="1"/>
-                        <color key="backgroundColor" name="Colors/neonRed"/>
+                        <rect key="frame" x="8" y="76" width="269" height="1"/>
+                        <color key="backgroundColor" name="Colors/neon"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="mB4-iT-ovE"/>
                         </constraints>
@@ -60,7 +60,7 @@
                     <constraint firstItem="cWb-Wj-iUU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="96x-3O-hnW"/>
                     <constraint firstItem="s1Y-Lo-5l4" firstAttribute="leading" secondItem="cWb-Wj-iUU" secondAttribute="leading" id="KKV-ab-ScM"/>
                     <constraint firstAttribute="trailing" secondItem="cWb-Wj-iUU" secondAttribute="trailing" constant="8" id="bpL-GZ-xX6"/>
-                    <constraint firstAttribute="trailing" secondItem="s1Y-Lo-5l4" secondAttribute="trailing" constant="8" id="hIk-pp-qyy"/>
+                    <constraint firstAttribute="trailing" secondItem="s1Y-Lo-5l4" secondAttribute="trailing" constant="34" id="hIk-pp-qyy"/>
                     <constraint firstItem="s1Y-Lo-5l4" firstAttribute="top" secondItem="cWb-Wj-iUU" secondAttribute="bottom" constant="7" id="nu7-tg-QEl"/>
                     <constraint firstAttribute="bottom" secondItem="s1Y-Lo-5l4" secondAttribute="bottom" constant="2" id="vec-uY-GCA"/>
                 </constraints>
@@ -78,8 +78,8 @@
         <namedColor name="Colors/dark">
             <color red="0.059000000357627869" green="0.059000000357627869" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Colors/neonRed">
-            <color red="0.92900002002716064" green="0.10599999874830246" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Colors/neon">
+            <color red="0.13333333333333333" green="0.30588235294117649" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Colors/slateGrey">
             <color red="0.42699998617172241" green="0.42699998617172241" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

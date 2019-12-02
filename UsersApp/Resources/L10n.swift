@@ -11,8 +11,6 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
-  /// Back
-  internal static let navigationBar = L10n.tr("Localizable", "navigation-bar")
 
   internal enum Profile {
     internal enum AvatarButton {
@@ -26,6 +24,22 @@ internal enum L10n {
       internal static let change = L10n.tr("Localizable", "profile.confirm-button.change")
       /// Create
       internal static let create = L10n.tr("Localizable", "profile.confirm-button.create")
+    }
+  }
+
+  internal enum Request {
+    /// Sorry, some problems with server
+    internal static let error = L10n.tr("Localizable", "request.error")
+  }
+
+  internal enum TextField {
+    internal enum Holder {
+      /// Email
+      internal static let emil = L10n.tr("Localizable", "text-field.holder.emil")
+      /// First Name
+      internal static let firstName = L10n.tr("Localizable", "text-field.holder.first-name")
+      /// Last Name
+      internal static let lastName = L10n.tr("Localizable", "text-field.holder.last-name")
     }
   }
 

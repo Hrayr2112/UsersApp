@@ -90,6 +90,9 @@ class UserProfileViewController: UIViewController {
     // MARK: - Configurations
     
     private func configureViews() {
+        firstNameField.set(placeholder: "Full name", style: .underLined)
+        lastNameField.set(placeholder: "Last name", style: .underLined)
+        emailField.set(placeholder: "Email", style: .underLined)
         if let inputData = inputData {
             firstNameField.text = inputData.firstName
             lastNameField.text = inputData.lastName
@@ -126,7 +129,7 @@ class UserProfileViewController: UIViewController {
     
     private func refreshConfirmButton() {
         confirmButton.isEnabled = hasChanges && isFilled
-        confirmButton.backgroundColor = confirmButton.isEnabled ? Asset.Colors.neonRed.color : Asset.Colors.slateGrey.color
+        confirmButton.backgroundColor = confirmButton.isEnabled ? Asset.Colors.neon.color : Asset.Colors.slateGrey.color
     }
     
     @objc

@@ -48,13 +48,13 @@
                             <color key="tintColor" name="Colors/white"/>
                             <connections>
                                 <action selector="createUserButtonTapped:" destination="BYZ-38-t0r" id="HdG-PY-rs2"/>
-                                <segue destination="bgt-Z4-E74" kind="show" identifier="UserProfile" id="hQH-cF-KeZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="K9t-7y-pZn" id="QSr-Tz-pWa"/>
                         <outlet property="tableView" destination="Qrb-pI-gSv" id="1r3-4a-u9c"/>
+                        <segue destination="bgt-Z4-E74" kind="show" identifier="UserProfile" id="yhJ-iH-h2t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -104,13 +104,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="795"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rsk-CT-9NL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="279"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="398"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="374" placeholderIntrinsicHeight="81" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="79G-OB-dKt">
-                                                <rect key="frame" x="30" y="198" width="354" height="81"/>
+                                                <rect key="frame" x="30" y="198" width="354" height="200"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jLO-MC-9Xb" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="56.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -120,7 +120,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gH-SM-tTl" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="32" width="354" height="17"/>
+                                                        <rect key="frame" x="0.0" y="71.5" width="354" height="57"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -130,7 +130,7 @@
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cL4-zV-C8A" customClass="TextField" customModule="UsersApp" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="64" width="354" height="17"/>
+                                                        <rect key="frame" x="0.0" y="143.5" width="354" height="56.5"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -140,6 +140,9 @@
                                                         </connections>
                                                     </textField>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="wg9-aZ-cm9"/>
+                                                </constraints>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sWj-u3-3Ed">
                                                 <rect key="frame" x="143" y="0.0" width="128" height="128"/>
@@ -186,7 +189,7 @@
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWN-es-KUb">
                                 <rect key="frame" x="0.0" y="814" width="414" height="52"/>
-                                <color key="backgroundColor" name="Colors/neonRed"/>
+                                <color key="backgroundColor" name="Colors/neon"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Sdg-pl-wfH"/>
                                 </constraints>
@@ -234,8 +237,8 @@
         <namedColor name="Colors/dark">
             <color red="0.059000000357627869" green="0.059000000357627869" blue="0.067000001668930054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Colors/neonRed">
-            <color red="0.92900002002716064" green="0.10599999874830246" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Colors/neon">
+            <color red="0.13333333333333333" green="0.30588235294117649" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Colors/white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -6,13 +6,29 @@
   Copyright © 2019 Hrayr Yeghiazaryan. All rights reserved.
 */
 
-"navigation-bar" = "Back";
+// Users list
+
 "users-list.title" = "Users";
+
+// Profile
+
 "profile.confirm-button.create" = "Create";
 "profile.confirm-button.change" = "Change";
 "profile.avatar-button.choose" = "Choose";
 "profile.avatar-button.change" = "Change";
+
+// Validation
+
 "validation.empty.first-name" = "First name must have at least one character";
 "validation.empty.last-name" = "Last name must have at least one character";
 "validation.incorrect-email" = "Incorrect email";
 
+// TextField
+
+"text-field.holder.first-name" = "First Name";
+"text-field.holder.last-name" = "Last Name";
+"text-field.holder.emil" = "Email";
+
+// Error
+
+"request.error" = "Sorry, some problems with server";
