@@ -74,6 +74,13 @@ class UsersListViewController: UIViewController {
         }
     }
     
+    func showError(message: String) {
+        let alertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let action = UIAlertAction.init(title: "", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: - UITableViewDelegate
@@ -123,9 +130,8 @@ extension UsersListViewController {
             switch result {
             case let .success(data):
                 self.viewModels = data.map { UserListCellVM(data: $0) }
-            case let .failure(error):
-                // TODO: Show alert with error
-                break
+            case .failure:
+                self.showError(message: L10n.Request.error)
             }
         }
     }
@@ -137,10 +143,6 @@ extension UsersListViewController: UserProfileDelegate {
     
     func reloadUsersData() {
         loadData()
-    }
-
-    func showError(message: String) {
-        // TODO: Show alert with error
     }
     
 }

@@ -10,7 +10,6 @@ import UIKit
 
 protocol UserProfileDelegate: AnyObject {
     func reloadUsersData()
-    func showError(message: String)
 }
 
 class UserProfileViewController: UIViewController {
@@ -204,6 +203,13 @@ extension UserProfileViewController {
         refreshConfirmButton()
     }
     
+    func showError(message: String) {
+        let alertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let action = UIAlertAction.init(title: "", style: .default, handler: nil)
+        alertController.addAction(action)
+        present(alertController, animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: - API
@@ -218,9 +224,8 @@ extension UserProfileViewController {
             switch result {
             case .success:
                 self.roteToListAfterSuccess()
-            case let .failure(error):
-                self.delegate?.showError(message: error.localizedDescription)
-                break
+            case.failure:
+                self.showError(message: L10n.Request.error)
             }
         }
     }
@@ -233,9 +238,8 @@ extension UserProfileViewController {
             switch result {
             case .success:
                 self.roteToListAfterSuccess()
-            case let .failure(error):
-                self.delegate?.showError(message: error.localizedDescription)
-                break
+            case .failure:
+                self.showError(message: L10n.Request.error)
             }
         }
     }
