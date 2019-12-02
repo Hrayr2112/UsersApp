@@ -6,6 +6,10 @@
   Copyright © 2019 Hrayr Yeghiazaryan. All rights reserved.
 */
 
+// Navigation Bar
+
+"navigation-bar.back" = "Back";
+
 // Users list
 
 "users-list.title" = "Users";

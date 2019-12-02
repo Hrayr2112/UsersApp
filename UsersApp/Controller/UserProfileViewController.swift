@@ -15,12 +15,6 @@ protocol UserProfileDelegate: AnyObject {
 
 class UserProfileViewController: UIViewController {
     
-    // MARK: - Constants
-    
-    private enum Constants {
-        static let bottomConstraintDefaultValue: CGFloat = 30
-    }
-    
     // MARK: - UI
     
     @IBOutlet private var avatarImageView: UIImageView!
@@ -78,6 +72,7 @@ class UserProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationBar()
         configureViews()
         refreshConfirmButton()
         configureKeyboard()
@@ -92,10 +87,16 @@ class UserProfileViewController: UIViewController {
     
     // MARK: - Configurations
     
+    private func configureNavigationBar() {
+        let backButton = UIBarButtonItem()
+        backButton.title = L10n.NavigationBar.back
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+    }
+    
     private func configureViews() {
-        firstNameField.set(placeholder: "Full name", style: .underLined)
-        lastNameField.set(placeholder: "Last name", style: .underLined)
-        emailField.set(placeholder: "Email", style: .underLined)
+        firstNameField.set(placeholder: L10n.TextField.Holder.firstName, style: .underLined)
+        lastNameField.set(placeholder: L10n.TextField.Holder.lastName, style: .underLined)
+        emailField.set(placeholder: L10n.TextField.Holder.emil, style: .underLined)
         if let inputData = inputData {
             firstNameField.text = inputData.firstName
             lastNameField.text = inputData.lastName
@@ -112,9 +113,9 @@ class UserProfileViewController: UIViewController {
             guard let self = self else { return }
             switch event {
             case .willShow:
-                self.bottomConstraint.constant = height - self.view.safeAreaInsets.bottom + Constants.bottomConstraintDefaultValue
+                self.bottomConstraint.constant = height - self.view.safeAreaInsets.bottom
             case .willHide:
-                self.bottomConstraint.constant = height + Constants.bottomConstraintDefaultValue
+                self.bottomConstraint.constant = height
             }
             self.view.layoutIfNeeded()
         }
