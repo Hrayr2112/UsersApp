@@ -39,6 +39,7 @@ class UsersListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationBar()
         configureTableView()
         loadData()
         // Do any additional setup after loading the view.
@@ -52,6 +53,12 @@ class UsersListViewController: UIViewController {
     }
     
     // MARK: - Configurations
+    
+    private func configureNavigationBar() {
+        let textAttributes = [NSAttributedString.Key.foregroundColor: Asset.Colors.white.color]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        navigationItem.title = L10n.UsersList.title
+    }
     
     private func configureTableView() {
         tableView.register(cellType: UserListCell.self)
