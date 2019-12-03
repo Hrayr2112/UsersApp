@@ -15,7 +15,6 @@ class UsersListViewController: UIViewController {
     
     private enum Constants {
         static let profileSegue = "UserProfile"
-        static let cellName = "UserListCell"
         static let rowHeight: CGFloat = 80
     }
     
@@ -42,7 +41,6 @@ class UsersListViewController: UIViewController {
         configureNavigationBar()
         configureTableView()
         loadData()
-        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

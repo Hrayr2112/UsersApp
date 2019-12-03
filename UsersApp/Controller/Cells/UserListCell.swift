@@ -25,6 +25,10 @@ class UserListCell: UITableViewCell, NibReusable {
         avatarImageView.layer.cornerRadius = avatarImageView.bounds.height / 2
     }
     
+    override func prepareForReuse() {
+        avatarImageView.cancelDownload()
+    }
+    
     // MARK: - ViewModel
 
     var viewModel: UserListCellVM? {
@@ -39,8 +43,12 @@ class UserListCell: UITableViewCell, NibReusable {
     func configure(with viewModel: UserListCellVM) {
         fullNameLabel.text = viewModel.fullName
         emailLabel.text = viewModel.email
-        avatarImageView.isHidden = viewModel.avatarUrl == nil
-        avatarImageView.setImage(with: viewModel.avatarUrl)
+        if viewModel.avatarUrl != nil {
+            avatarImageView.isHidden = false
+            avatarImageView.setImage(with: viewModel.avatarUrl)
+        } else {
+            avatarImageView.isHidden = true
+        }
     }
     
 }

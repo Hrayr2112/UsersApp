@@ -96,7 +96,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                         <connections>
                                                             <action selector="textFieldEditingChanged:" destination="bgt-Z4-E74" eventType="editingChanged" id="pO6-BU-6SF"/>
                                                             <outlet property="delegate" destination="bgt-Z4-E74" id="mQI-i9-QAp"/>
@@ -106,7 +106,7 @@
                                                         <rect key="frame" x="0.0" y="32" width="354" height="17"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                         <connections>
                                                             <action selector="textFieldEditingChanged:" destination="bgt-Z4-E74" eventType="editingChanged" id="iEh-dF-KbZ"/>
                                                             <outlet property="delegate" destination="bgt-Z4-E74" id="pCr-5H-hrj"/>
@@ -116,7 +116,7 @@
                                                         <rect key="frame" x="0.0" y="64" width="354" height="17"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                                         <connections>
                                                             <action selector="textFieldEditingChanged:" destination="bgt-Z4-E74" eventType="editingChanged" id="umv-QO-6Pc"/>
                                                             <outlet property="delegate" destination="bgt-Z4-E74" id="idd-4c-z6c"/>

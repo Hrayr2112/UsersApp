@@ -48,8 +48,4 @@ struct UserListCellVM {
         }
         return nil
     }
-    
-    var createdAt: String {
-        return data.createdAt
-    }
 }

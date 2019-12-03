@@ -53,6 +53,7 @@ class UserProfileViewController: UIViewController {
         return emailField.validationError == nil && firstNameField.validationError == nil && lastNameField.validationError == nil
     }
     
+    // Use for edit mode
     private var hasChanges: Bool {
         guard let inputData = inputData else {
             return true
@@ -73,13 +74,14 @@ class UserProfileViewController: UIViewController {
         super.viewDidLoad()
         configureNavigationBar()
         configureViews()
+        fillInfoNeeded()
         refreshConfirmButton()
         configureKeyboard()
         
         // Set picker delegate
         imagePicker.delegate = self
         
-        // Tap tom dismiss keyboard
+        // Tap to dismiss keyboard
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
@@ -96,6 +98,9 @@ class UserProfileViewController: UIViewController {
         firstNameField.set(placeholder: L10n.TextField.Holder.firstName, style: .underLined)
         lastNameField.set(placeholder: L10n.TextField.Holder.lastName, style: .underLined)
         emailField.set(placeholder: L10n.TextField.Holder.emil, style: .underLined)
+    }
+    
+    private func fillInfoNeeded() {
         if let inputData = inputData {
             firstNameField.text = inputData.firstName
             lastNameField.text = inputData.lastName
@@ -104,12 +109,11 @@ class UserProfileViewController: UIViewController {
         } else {
             confirmButton.setTitle(L10n.Profile.ConfirmButton.create, for: .normal)
         }
-        configureAvatarView(with: inputData?.avatarUrl)
+        configureAvatar(with: inputData?.avatarUrl)
     }
     
     private func configureKeyboard() {
-        keyboardHelper.eventClosure = { [weak self] event, height in
-            guard let self = self else { return }
+        keyboardHelper.eventClosure = { event, height in
             switch event {
             case .willShow:
                 self.bottomConstraint.constant = height - self.view.safeAreaInsets.bottom
@@ -120,7 +124,7 @@ class UserProfileViewController: UIViewController {
         }
     }
     
-    private func configureAvatarView(with urlString: String?) {
+    private func configureAvatar(with urlString: String?) {
         avatarImageView.layer.cornerRadius = avatarImageView.bounds.height / 2
         if let urlString = urlString, let avatarUrl = URL(string: urlString) {
             avatarImageView.setImage(with: avatarUrl)

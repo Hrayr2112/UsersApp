@@ -193,19 +193,11 @@
 				38D2F2F62383536100634260 /* Helper */,
 				38D2F2F52383535600634260 /* View */,
 				38D2F2F42383534E00634260 /* Controller */,
-				38D2F2F32383534500634260 /* Manager */,
 				38D2F2E52383531000634260 /* Main.storyboard */,
 				38D2F2EA2383531200634260 /* LaunchScreen.storyboard */,
 				38D2F2ED2383531200634260 /* Info.plist */,
 			);
 			path = UsersApp;
-			sourceTree = "<group>";
-		};
-		38D2F2F32383534500634260 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		38D2F2F42383534E00634260 /* Controller */ = {
