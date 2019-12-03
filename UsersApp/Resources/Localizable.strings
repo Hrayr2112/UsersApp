@@ -10,6 +10,10 @@
 
 "navigation-bar.back" = "Back";
 
+// Alert
+
+"alert.action.ok" = "Ok";
+
 // Users list
 
 "users-list.title" = "Users";

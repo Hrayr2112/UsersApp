@@ -10,6 +10,5 @@ pod 'Alamofire'
 pod 'Reusable'
 pod 'Kingfisher'
 pod 'MaterialTextField'
-pod 'SwiftGen'
 
 end

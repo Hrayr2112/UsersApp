@@ -12,6 +12,13 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
 
+  internal enum Alert {
+    internal enum Action {
+      /// Ok
+      internal static let ok = L10n.tr("Localizable", "alert.action.ok")
+    }
+  }
+
   internal enum NavigationBar {
     /// Back
     internal static let back = L10n.tr("Localizable", "navigation-bar.back")

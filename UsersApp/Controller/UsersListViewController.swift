@@ -74,7 +74,7 @@ class UsersListViewController: UIViewController {
     
     func showError(message: String) {
         let alertController = UIAlertController(title: message, message: nil, preferredStyle: .alert)
-        let action = UIAlertAction.init(title: "", style: .default, handler: nil)
+        let action = UIAlertAction.init(title: L10n.Alert.Action.ok, style: .default, handler: nil)
         alertController.addAction(action)
         present(alertController, animated: true, completion: nil)
     }
