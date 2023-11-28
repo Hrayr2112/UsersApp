@@ -18,13 +18,13 @@ open class Resource<T> {
     }
 }
 
-class UsersResource: Resource<[User]> {
+class UsersResource: Resource<User> {
     
     init() {
-        super.init(request: UserAction.getUsers) { response -> Result<[User]> in
+        super.init(request: UserAction.getUsers) { response -> Result<User> in
             if let data = response as? Data {
                 do {
-                    let decodedUsers = try JSONDecoder().decode(Array<User>.self, from: data)
+                    let decodedUsers = try JSONDecoder().decode(User.self, from: data)
                     return Result.success(decodedUsers)
                 } catch {
                     return Result.failure(CustomError(value: error.localizedDescription))

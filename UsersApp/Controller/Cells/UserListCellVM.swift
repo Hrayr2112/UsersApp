@@ -21,29 +21,37 @@ struct UserListCellVM {
     }
     
     // MARK: - Public
-
-    var id: Int {
-        return data.id
-    }
     
     var fullName: String {
-        return data.firstName + " " + data.lastName
+        if let data = data.results.first {
+            return data.name.first + " " + data.name.last
+        }
+        return ""
     }
     
     var firstName: String {
-        return data.firstName
+        if let data = data.results.first {
+            return data.name.first
+        }
+        return ""
     }
     
     var lastName: String {
-        return data.lastName
+        if let data = data.results.first {
+            return data.name.last
+        }
+        return ""
     }
 
     var email: String {
-        return data.email
+        if let data = data.results.first {
+            return data.email
+        }
+        return ""
     }
 
     var avatarUrl: URL? {
-        if let stringUrl = data.avatarUrl, let url = URL(string: stringUrl) {
+        if let stringUrl = data.results.first?.picture.large, let url = URL(string: stringUrl) {
             return url
         }
         return nil

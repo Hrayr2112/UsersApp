@@ -30,7 +30,7 @@ extension UserAction: APIAction {
     var path: String {
         switch self {
         case .getUsers, .create:
-            return "/users"
+            return "/api"
         case let .edit(_, id):
             return "/users/\(id)"
         }
@@ -49,7 +49,7 @@ extension UserAction: APIAction {
     }
     
     var baseURL: String {
-        return "https://frogogo-test.herokuapp.com"
+        return "https://randomuser.me"
     }
     
     var authHeader: [String : String] {

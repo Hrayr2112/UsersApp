@@ -10,33 +10,23 @@ import UIKit
 import Foundation
 
 struct User: Decodable {
-    let id: Int
-    let firstName: String
-    let lastName: String
-    let email: String
-    let avatarUrl: String?
-    let createdAt: String
-    let updatedAt: String
-    let url: String?
     
-    enum CodingKeys: String, CodingKey {
-      case id, email, url
-      case firstName = "first_name"
-      case lastName = "last_name"
-      case createdAt = "created_at"
-      case avatarUrl = "avatar_url"
-      case updatedAt = "updated_at"
-    }
+    let results: [UserModel]
     
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        firstName = try values.decode(String.self, forKey: .firstName)
-        lastName = try values.decode(String.self, forKey: .lastName)
-        createdAt = try values.decode(String.self, forKey: .createdAt)
-        avatarUrl = try? values.decode(String.self, forKey: .avatarUrl)
-        id = try values.decode(Int.self, forKey: .id)
-        email = try values.decode(String.self, forKey: .email)
-        updatedAt = try values.decode(String.self, forKey: .updatedAt)
-        url = try values.decode(String.self, forKey: .url)
+    struct UserModel: Decodable {
+        let gender: String
+        let name: Name
+        let email: String
+        let picture: Picture
+        
+        struct Name: Decodable {
+            let title: String
+            let first: String
+            let last: String
+        }
+        
+        struct Picture: Decodable {
+            let large: String
+        }
     }
 }

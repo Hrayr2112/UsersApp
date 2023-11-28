@@ -89,7 +89,7 @@ extension UsersListViewController: UITableViewDelegate {
         guard let viewModel = viewModels[safe: indexPath.row] else {
             return
         }
-        profileInputData = NewUser(id: viewModel.id,
+        profileInputData = NewUser(id: 0,
                                    firstName: viewModel.firstName,
                                    lastName: viewModel.lastName,
                                    email: viewModel.email,
@@ -127,7 +127,7 @@ extension UsersListViewController {
             self.loadingView.stopLoading()
             switch result {
             case let .success(data):
-                self.viewModels = data.map { UserListCellVM(data: $0) }
+                self.viewModels = [UserListCellVM(data: data)]
             case .failure:
                 self.showError(message: L10n.Request.error)
             }

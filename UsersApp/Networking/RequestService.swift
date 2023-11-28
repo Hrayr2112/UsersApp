@@ -17,7 +17,7 @@ struct ApiService {
     
     private let api: APIClientProtocol = APIClient()
     
-    func getUsers(_ completion: @escaping (Result<[User]>) -> Void) {
+    func getUsers(_ completion: @escaping (Result<User>) -> Void) {
         api.request(UsersResource(), completion: completion)
     }
     
