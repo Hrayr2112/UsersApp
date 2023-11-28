@@ -223,12 +223,11 @@ extension UserProfileViewController {
     private func create(user: NewUser) {
         loadinView.startLoading()
         dismissKeyboard()
-        requestService.create(user: user) { result in
-            self.loadinView.stopLoading()
-            switch result {
-            case .success:
+        Task {
+            do {
+                try await requestService.create(user: user)
                 self.roteToListAfterSuccess()
-            case.failure:
+            } catch {
                 self.showError(message: L10n.Request.error)
             }
         }
@@ -237,12 +236,11 @@ extension UserProfileViewController {
     private func edit(user: NewUser, id: Int) {
         loadinView.startLoading()
         dismissKeyboard()
-        requestService.edit(user: user, id: id) { result in
-            self.loadinView.stopLoading()
-            switch result {
-            case .success:
+        Task {
+            do {
+                try await requestService.edit(user: user, id: id)
                 self.roteToListAfterSuccess()
-            case .failure:
+            } catch {
                 self.showError(message: L10n.Request.error)
             }
         }

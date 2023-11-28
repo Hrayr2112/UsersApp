@@ -17,15 +17,23 @@ struct ApiService {
     
     private let api: APIClientProtocol = APIClient()
     
-    func getUsers(_ completion: @escaping (Result<User>) -> Void) {
-        api.request(UsersResource(), completion: completion)
+    func getUsers() async throws -> User {
+        let data = try await api.request(UsersResource())
+        do {
+            let decodedUsers = try JSONDecoder().decode(User.self, from: data)
+            return decodedUsers
+        } catch {
+            throw CustomError(value: error.localizedDescription)
+        }
     }
     
-    func create(user: NewUser, _ completion: @escaping (Result<User>) -> Void) {
-        api.request(NewUserResource(with: user), completion: completion)
+    func create(user: NewUser) async throws -> () {
+        let data = try await api.request(NewUserResource(with: user))
+        return
     }
     
-    func edit(user: NewUser, id: Int, _ completion: @escaping (Result<User>) -> Void) {
-        api.request(NewUserResource(with: user, id: id), completion: completion)
+    func edit(user: NewUser, id: Int) async throws -> () {
+        let data = try await api.request(NewUserResource(with: user, id: id))
+        return
     }
 }

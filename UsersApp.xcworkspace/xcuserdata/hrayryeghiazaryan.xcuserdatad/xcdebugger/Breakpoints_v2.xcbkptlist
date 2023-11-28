@@ -7,20 +7,98 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "384931CB-45A9-456C-970F-B77F09C86A63"
+            uuid = "C4222817-3ADB-4007-B1F0-2F2874A793D3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UsersApp/Networking/Resource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C4222817-3ADB-4007-B1F0-2F2874A793D3 - a271cb595d3600db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UsersApp.UsersResource.__allocating_init() -&gt; UsersApp.UsersResource"
+                  moduleName = "UsersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/Resource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "C4222817-3ADB-4007-B1F0-2F2874A793D3 - 519842bbf118914b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UsersApp.UsersResource.init() -&gt; UsersApp.UsersResource"
+                  moduleName = "UsersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/Resource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "C4222817-3ADB-4007-B1F0-2F2874A793D3 - 519842bbf1189109"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UsersApp.UsersResource.init() -&gt; UsersApp.UsersResource"
+                  moduleName = "UsersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/Resource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E28D31A-3DE9-4ADC-BB9B-ABBB91B8F48C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UsersApp/Networking/Resource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "init(with:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "384931CB-45A9-456C-970F-B77F09C86A63 - e4d344a497473e25"
+                  uuid = "9E28D31A-3DE9-4ADC-BB9B-ABBB91B8F48C - c6d808e609f54c54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any) -&gt; UsersApp.Result&lt;UsersApp.User&gt; in UsersApp.UsersResource.init() -&gt; UsersApp.UsersResource"
+                  moduleName = "UsersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/Resource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "624">
+               </Location>
+               <Location
+                  uuid = "9E28D31A-3DE9-4ADC-BB9B-ABBB91B8F48C - e4d344a497473cc8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,39 +108,9 @@
                   urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/Resource.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "42"
-                  endingLineNumber = "42"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
                   offsetFromSymbolStart = "200">
-               </Location>
-               <Location
-                  uuid = "384931CB-45A9-456C-970F-B77F09C86A63 - 46761b803cdbbaf7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Any) -&gt; UsersApp.Result&lt;UsersApp.User&gt; in UsersApp.NewUserResource.init(with: UsersApp.NewUser) -&gt; UsersApp.NewUserResource"
-                  moduleName = "UsersApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/Resource.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "384931CB-45A9-456C-970F-B77F09C86A63 - 46761b803cdbbaf7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Any) -&gt; UsersApp.Result&lt;UsersApp.User&gt; in UsersApp.NewUserResource.init(with: UsersApp.NewUser) -&gt; UsersApp.NewUserResource"
-                  moduleName = "UsersApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/Resource.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "68">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -70,20 +118,35 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EFF01646-B6C6-4B6C-A617-AA6D08DE0DB4"
+            uuid = "9B12B6DB-0E30-4246-BB22-BFC542FF00D3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UsersApp/Networking/Resource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "init(with:id:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "EFF01646-B6C6-4B6C-A617-AA6D08DE0DB4 - 71880369b41c0a71"
+                  uuid = "9B12B6DB-0E30-4246-BB22-BFC542FF00D3 - c6d808e609f54fd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Any) -&gt; UsersApp.Result&lt;UsersApp.User&gt; in UsersApp.UsersResource.init() -&gt; UsersApp.UsersResource"
+                  moduleName = "UsersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/Resource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "9B12B6DB-0E30-4246-BB22-BFC542FF00D3 - 71880369b41c0569"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -93,41 +156,154 @@
                   urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/Resource.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
                   offsetFromSymbolStart = "216">
                </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75BEC1D6-E7A6-4BAE-A539-EC3E109608DA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UsersApp/Networking/Resource.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "init(request:)"
+            landmarkType = "7">
+            <Locations>
                <Location
-                  uuid = "EFF01646-B6C6-4B6C-A617-AA6D08DE0DB4 - 7cc4bbbd89d5bc7a"
+                  uuid = "75BEC1D6-E7A6-4BAE-A539-EC3E109608DA - 686e1df634b3f01e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Any) -&gt; UsersApp.Result&lt;UsersApp.User&gt; in UsersApp.NewUserResource.init(with: UsersApp.NewUser, id: Swift.Int) -&gt; UsersApp.NewUserResource"
+                  symbolName = "UsersApp.Resource.__allocating_init(request: UsersApp.APIAction, parse: (Any) -&gt; UsersApp.Result&lt;&#x3c4;_0_0&gt;) -&gt; UsersApp.Resource&lt;&#x3c4;_0_0&gt;"
                   moduleName = "UsersApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/Resource.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "96">
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "48">
                </Location>
                <Location
-                  uuid = "EFF01646-B6C6-4B6C-A617-AA6D08DE0DB4 - 7cc4bbbd89d5bc7a"
+                  uuid = "75BEC1D6-E7A6-4BAE-A539-EC3E109608DA - 663ed954bd06f94a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Any) -&gt; UsersApp.Result&lt;UsersApp.User&gt; in UsersApp.NewUserResource.init(with: UsersApp.NewUser, id: Swift.Int) -&gt; UsersApp.NewUserResource"
+                  symbolName = "UsersApp.Resource.init(request: UsersApp.APIAction, parse: (Any) -&gt; UsersApp.Result&lt;&#x3c4;_0_0&gt;) -&gt; UsersApp.Resource&lt;&#x3c4;_0_0&gt;"
                   moduleName = "UsersApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/Resource.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "68">
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "75BEC1D6-E7A6-4BAE-A539-EC3E109608DA - 70d543d8cfdd2b3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UsersApp.Resource.init(request: UsersApp.APIAction) -&gt; UsersApp.Resource&lt;&#x3c4;_0_0&gt;"
+                  moduleName = "UsersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/Resource.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "64">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "347B25FB-5ADA-4D36-9542-D34118A44A19"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UsersApp/Networking/APIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "request(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "347B25FB-5ADA-4D36-9542-D34118A44A19 - 1faefa7781d27826"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UsersApp.APIClient.request&lt;&#x3c4;_0_0&gt;(_: UsersApp.Resource&lt;&#x3c4;_0_0&gt;, completion: (UsersApp.Result&lt;&#x3c4;_0_0&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "UsersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/APIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "347B25FB-5ADA-4D36-9542-D34118A44A19 - b21dfe49def0a111"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; () in closure #1 (Swift.UnsafeContinuation&lt;Foundation.Data, Swift.Error&gt;) -&gt; () in UsersApp.APIClient.request&lt;&#x3c4;_0_0&gt;(UsersApp.Resource&lt;&#x3c4;_0_0&gt;) async throws -&gt; Foundation.Data"
+                  moduleName = "UsersApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hrayryeghiazaryan/Desktop/UsersApp/UsersApp/Networking/APIClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "396">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D6AD66E-9FC3-4B73-829D-2D46B00BDF47"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UsersApp/Networking/APIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "request(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D7422EE-4DD5-48A4-9D34-6223267DF535"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UsersApp/Networking/APIClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "request(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

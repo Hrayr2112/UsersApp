@@ -122,14 +122,12 @@ extension UsersListViewController: UITableViewDataSource {
 extension UsersListViewController {
     func loadData() {
         loadingView.startLoading()
-        let model = ApiService()
-        model.getUsers { result in
-            self.loadingView.stopLoading()
-            switch result {
-            case let .success(data):
-                self.viewModels = [UserListCellVM(data: data)]
-            case .failure:
-                self.showError(message: L10n.Request.error)
+        Task {
+            do {
+                let users = try await ApiService().getUsers()
+                viewModels = [UserListCellVM(data: users)]
+            } catch {
+                
             }
         }
     }

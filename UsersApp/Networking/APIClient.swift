@@ -9,15 +9,24 @@
 import Alamofire
 
 protocol APIClientProtocol {
-    func request<T>(_ resource: Resource<T>, completion: @escaping (Result<T>) -> Void)
+    func request<T>(_ resource: Resource<T>) async throws -> Data
 }
 
 struct APIClient: APIClientProtocol {
-    func request<T>(_ resource: Resource<T>, completion: @escaping (Result<T>) -> Void) {
-        Alamofire
-            .request(resource.request)
-            .responseData { dataResponse in
-                completion(dataResponse.result.flatMap2(resource.parse))
+    func request<T>(_ resource: Resource<T>) async throws -> Data {
+        
+        try await withUnsafeThrowingContinuation { continuation in
+            Alamofire.request(resource.request).validate().responseData { response in
+                if let data = response.data {
+                    continuation.resume(returning: data)
+                    return
+                }
+                if let err = response.error {
+                    continuation.resume(throwing: err)
+                    return
+                }
+                fatalError("should not get here")
+            }
         }
     }
 }
