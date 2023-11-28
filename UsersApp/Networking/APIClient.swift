@@ -9,14 +9,14 @@
 import Alamofire
 
 protocol APIClientProtocol {
-    func request<T>(_ resource: Resource<T>) async throws -> Data
+    func request(_ resource: APIAction) async throws -> Data
 }
 
 struct APIClient: APIClientProtocol {
-    func request<T>(_ resource: Resource<T>) async throws -> Data {
+    func request(_ resource: APIAction) async throws -> Data {
         
         try await withUnsafeThrowingContinuation { continuation in
-            Alamofire.request(resource.request).validate().responseData { response in
+            Alamofire.request(resource).validate().responseData { response in
                 if let data = response.data {
                     continuation.resume(returning: data)
                     return

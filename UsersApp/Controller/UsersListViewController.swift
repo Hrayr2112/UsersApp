@@ -127,7 +127,7 @@ extension UsersListViewController {
                 let users = try await ApiService().getUsers()
                 viewModels = [UserListCellVM(data: users)]
             } catch {
-                
+                self.showError(message: L10n.Request.error)
             }
         }
     }

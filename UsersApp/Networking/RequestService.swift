@@ -18,7 +18,7 @@ struct ApiService {
     private let api: APIClientProtocol = APIClient()
     
     func getUsers() async throws -> User {
-        let data = try await api.request(UsersResource())
+        let data = try await api.request(UserAction.getUsers)
         do {
             let decodedUsers = try JSONDecoder().decode(User.self, from: data)
             return decodedUsers
@@ -28,12 +28,12 @@ struct ApiService {
     }
     
     func create(user: NewUser) async throws -> () {
-        let data = try await api.request(NewUserResource(with: user))
+        let data = try await api.request(UserAction.create(user: user))
         return
     }
     
     func edit(user: NewUser, id: Int) async throws -> () {
-        let data = try await api.request(NewUserResource(with: user, id: id))
+        let data = try await api.request(UserAction.edit(user: user, id: id))
         return
     }
 }

@@ -19,7 +19,6 @@
 		383BC42F23846F9300C8AB2D /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BC42E23846F9300C8AB2D /* TextFieldStyle.swift */; };
 		383BC4312384703000C8AB2D /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BC4302384703000C8AB2D /* EmailValidator.swift */; };
 		383BC4332384704700C8AB2D /* ValueValidatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BC4322384704700C8AB2D /* ValueValidatorProtocol.swift */; };
-		38433590239286F600D28AB2 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3843358F239286F600D28AB2 /* Resource.swift */; };
 		384335922392872100D28AB2 /* APIAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384335912392872100D28AB2 /* APIAction.swift */; };
 		384335942392875C00D28AB2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384335932392875C00D28AB2 /* APIClient.swift */; };
 		384335962392879300D28AB2 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384335952392879300D28AB2 /* CustomError.swift */; };
@@ -58,7 +57,6 @@
 		383BC42E23846F9300C8AB2D /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		383BC4302384703000C8AB2D /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		383BC4322384704700C8AB2D /* ValueValidatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueValidatorProtocol.swift; sourceTree = "<group>"; };
-		3843358F239286F600D28AB2 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		384335912392872100D28AB2 /* APIAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAction.swift; sourceTree = "<group>"; };
 		384335932392875C00D28AB2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		384335952392879300D28AB2 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 			children = (
 				383BC41C23835C4500C8AB2D /* RequestService.swift */,
 				383BC41F23836CBB00C8AB2D /* UserAction.swift */,
-				3843358F239286F600D28AB2 /* Resource.swift */,
 				384335912392872100D28AB2 /* APIAction.swift */,
 				384335932392875C00D28AB2 /* APIClient.swift */,
 			);
@@ -420,7 +417,6 @@
 				384335942392875C00D28AB2 /* APIClient.swift in Sources */,
 				38D2F2FF2383557000634260 /* UserListCell.swift in Sources */,
 				388716892395926D006829AC /* LoadingView.swift in Sources */,
-				38433590239286F600D28AB2 /* Resource.swift in Sources */,
 				383BC41D23835C4500C8AB2D /* RequestService.swift in Sources */,
 				383BC42B23846F2000C8AB2D /* TextField.swift in Sources */,
 				383BC4332384704700C8AB2D /* ValueValidatorProtocol.swift in Sources */,
