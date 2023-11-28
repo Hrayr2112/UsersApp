@@ -122,6 +122,7 @@ extension UsersListViewController: UITableViewDataSource {
 extension UsersListViewController {
     func loadData() {
         loadingView.startLoading()
+        
         Task {
             do {
                 let users = try await ApiService().getUsers()
